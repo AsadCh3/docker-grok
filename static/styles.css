@@ -1,0 +1,191 @@
+.main-box-analyzer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  padding: 3rem 10px;
+}
+.main-files-div {
+  width: 100%;
+}
+.formInputURls {
+  width: 600px;
+  margin: auto;
+}
+.formInputURls input {
+  width: 100%;
+  margin: 10px 0px;
+  padding: 10px;
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid gray;
+}
+.lableInput {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 5px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  cursor: pointer;
+  width: 500px;
+  margin: auto;
+}
+.btn-boxs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 1rem;
+}
+.urlInput-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 1rem auto;
+}
+.main-chatBox {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+}
+.chatnavBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  width: 100%;
+  padding: 10px;
+}
+.idbox p {
+  color: gray;
+  margin: 0px;
+  font-size: 14px;
+}
+.idbox h6 {
+  margin: 0px;
+}
+.main-chat-box {
+  width: 100%;
+}
+.navuser {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.iconsseting {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.iconsseting .bi {
+  color: red !important;
+  cursor: pointer;
+}
+.mainChat-div {
+min-height: 70vh;
+  overflow-y: auto;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.textareaBox {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 10px;
+}
+.textareaBox img {
+  cursor: pointer;
+}
+.textareaset {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+
+}
+
+.userMessage {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+.userBox {
+  display: flex;
+  flex-direction: column;
+  background: #005494;
+  color: white;
+  border-radius: 16.9091px 0px 16.9091px 16.9091px;
+  max-width: 68%;
+  padding: 10px;
+}
+.userBox pre {
+  padding: 5px;
+  border-radius: 7px;
+  font-size: 17px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 120%;
+  font-family: sans-serif;
+  margin: 0px;
+}
+.userBox small {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -9px;
+}
+.Chatrepla {
+  display: flex;
+  flex-direction: column;
+  background: #005494;
+  color: white;
+  border-radius: 0px 16.9091px 16.9091px 16.9091px;
+  max-width: 68%;
+  width: fit-content;
+  padding: 10px;
+}
+.chatBordRiplay {
+  width: 100%;
+  padding: 1rem;
+}
+.Chatrepla pre {
+  padding: 5px;
+  border-radius: 7px;
+  font-size: 17px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 120%;
+  font-family: sans-serif;
+  margin: 0px;
+}
+.Chatrepla small {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -9px;
+}
+
+@media (max-width: 650px) {
+  .formInputURls{
+    width: 100%;
+  }
+  .lableInput{
+    width: 100%;
+  }
+  .Chatrepla{
+    min-width: 100%;
+  }
+  .userBox{
+    min-width: 100%;
+  }
+}

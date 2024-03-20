@@ -1,0 +1,14 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Chatbots</title>
+</head>
+<body>
+    <ul>
+        {% for chatbot in chatbots %}
+            <li>{{ chatbot.domain_id }}: {{ chatbot.website_url }} Crawler: {{ chatbot.crawled }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

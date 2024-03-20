@@ -1,0 +1,101 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/styles.css') }}" />
+  </head>
+  <body>
+    <div class="main-box-analyzer">
+      <h1>Chatbot</h1>
+
+      <div class="main-chat-box">
+        <div class="main-chatBox">
+          <div class="chatnavBox">
+            <div class="navuser">
+              <div class="idbox">
+                <h6>Assistant</h6>
+                <p>23/8/14</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mainChat-div">
+            <div class="chatBordRiplay" id="chatBordRiplayId">
+
+            </div>
+          </div>
+
+          <div class="textareaBox">
+            <textarea
+              id="query-text"
+              placeholder="Write a message."
+              rows="3"
+              class="textareaset"
+            ></textarea>
+
+            <button id="textButton">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const chatUrl = "/query";
+      const queryBox = document.getElementById("query-text");
+      const textButton = document.getElementById("textButton");
+      const chatBordRiplayId = document.getElementById("chatBordRiplayId");
+
+      textButton.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        if (queryBox.value.length > 0) {
+          var userMessageElement = document.createElement("div");
+          userMessageElement.className = "userMessage";
+
+          var userMessage = `
+            <div class="userBox">
+              <pre style="color: white;">
+                ${queryBox.value}
+              </pre>
+              <small>9:38</small>
+            </div>`;
+
+          userMessageElement.innerHTML = userMessage;
+
+          chatBordRiplayId.appendChild(userMessageElement);
+
+          const options = {
+            method: "GET"
+          };
+
+          console.log(queryBox.value);
+          fetch(`${chatUrl}?query=${queryBox.value}&domain_id={{domain_id}}`, options)
+            .then((response) => response.json())
+            .then((data) => {
+              console.log("Response from server:", data);
+              var chatReply = document.createElement("div");
+              chatReply.className = "Chatrepla";
+
+              var chatReplyString = `
+                <pre style="color: white;">
+                  ${data.message}
+                </pre>
+                <small>9:30</small>
+              `;
+              chatReply.innerHTML = chatReplyString;
+              chatBordRiplayId.appendChild(chatReply);
+            })
+
+            .catch((error) => {
+              console.error("Error:", error);
+            });
+
+          queryBox.value = "";
+        } else {
+          console.log("There must be a value.");
+        }
+      });
+    </script>
+  </body>
+</html>
